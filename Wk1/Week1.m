@@ -1,13 +1,13 @@
 % Week 1 problems
 
-%% Problem 7
+%% Problem 7 Use histogram() function and learn to roll dice
 % n = 100;
 % sum7 = unidrnd(6,1,n) + unidrnd(6,1,n);
 n = 10000;
 figure
-histogram(sum(unidrnd(6,2,n),1))
+histogram(sum(unidrnd(6,2,n),1)) %Roll 2 dice n times, sum the pairs of dice
 
-%% Problem 8
+%% Problem 8 Compare odds of 2 scenarios of die(dice) rolling
 n = 1000000;
 odds1 = zeros(1,n);
 odds2 = zeros(1,n);
@@ -23,11 +23,11 @@ trueOdds2 = 1-(5/6)^4;
 disp("Odds of at least 1x 12 in 24 tosses is : " + mean(odds1) + " (" + trueOdds1 + ")")
 disp("Odds of at least 1x  6 in  4 tosses is : " + mean(odds2) + " (" + trueOdds2 + ")")
 
-%% Problem 9
+%% Problem 9 Simulate n number of craps games, compare to theoretical odds
 n = 1000000;
 outcome = zeros(1,n);
 tic
-for i = 1:n % this i a non-optimized loop, but thats OK
+for i = 1:n % this is a non-optimized loop, but thats OK
     ss = 0;
 %     sum9 = unidrnd(6,1,1) + unidrnd(6,1,1); %roll 2 dice, 1 time
     sum9 = sum(unidrnd(6,2,1),1); %roll 2 dice, 1 time
