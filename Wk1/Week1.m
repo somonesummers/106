@@ -62,6 +62,6 @@ for i = 1:n % this is a non-optimized loop, but thats OK
 end
 
 trueOdds = 8/36 + 2*3/36*3/9 + 2*4/36*4/10 + 2*5/36*5/11;  
-disp(mean(outcome) + "(" + trueOdds + ")")
+disp("Odds of winning craps is : " + mean(outcome) + "(" + trueOdds + ")")
 toc
 
